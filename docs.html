@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My API Gateway - Documentation</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+    h1 {
+      color: #2c3e50;
+    }
+    pre {
+      background-color: #eee;
+      padding: 10px;
+      border-left: 4px solid #3498db;
+      overflow-x: auto;
+    }
+    .section {
+      margin-bottom: 30px;
+    }
+    .note {
+      background-color: #fff8c4;
+      padding: 10px;
+      border-left: 4px solid #f39c12;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>My API Gateway - Documentation</h1>
+
+  <div class="note">
+    <strong>Note:</strong> All requests must include a valid <code>X-API-Key</code> header.
+  </div>
+
+  <div class="section">
+    <h2>GET /api/users</h2>
+    <p><strong>Description:</strong> Returns a list of users.</p>
+    <p><strong>Sample Response:</strong></p>
+    <pre>[
+  {"id": 1, "name": "Alice"},
+  {"id": 2, "name": "Bob"}
+]</pre>
+  </div>
+
+  <div class="section">
+    <h2>GET /api/products</h2>
+    <p><strong>Description:</strong> Returns a list of products.</p>
+    <p><strong>Sample Response:</strong></p>
+    <pre>[
+  {"sku": "A123", "productName": "Widget"},
+  {"sku": "B456", "productName": "Gadget"}
+]</pre>
+  </div>
+
+  <div class="section">
+    <h2>Error Responses</h2>
+    <ul>
+      <li><strong>401 Unauthorized</strong>: Invalid or missing API Key</li>
+      <li><strong>429 Too Many Requests</strong>: Rate limit exceeded</li>
+      <li><strong>404 Not Found</strong>: Invalid endpoint</li>
+    </ul>
+  </div>
+
+</body>
+</html>
